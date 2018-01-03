@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -50,12 +52,6 @@ def main():
     options.add_argument('--headless')
     options.add_argument('--disable-gpu')
     browser = webdriver.Chrome("./chromedriver", chrome_options=options)
-    '''
-    try:
-        #browser.client = webdriver.Chrome(chrome_options=options)
-    except:
-        pass
-    '''
     try:
         while True:
             browser.get('http://sjce.ac.in/results/')
